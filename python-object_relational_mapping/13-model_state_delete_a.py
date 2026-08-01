@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Deletes all State objects with a name containing the letter a (case-insensitive)
+Deletes all State objects with a name containing the letter a
 from the database hbtn_0e_6_usa.
 """
 import sys
@@ -26,8 +26,9 @@ if __name__ == "__main__":
     # Open a session to interact with the database
     session = Session()
 
-    # CRITICAL FIX: Use .ilike() for guaranteed case-insensitive matching
-    states_to_delete = session.query(State).filter(State.name.ilike('%a%')).all()
+    # Query all states containing the letter 'a' (case-sensitive)
+    # Use .like('%a%') for matching anywhere in the string
+    states_to_delete = session.query(State).filter(State.name.like('%a%')).all()
 
     # Delete each matching state object from the session
     for state in states_to_delete:
