@@ -26,12 +26,12 @@ if __name__ == "__main__":
     # Open a session to interact with the database
     session = Session()
 
-    # Query all states containing the letter 'a' (case-sensitive)
-    # Use .like('%a%') for matching anywhere in the string
-    states_to_delete = session.query(State).filter(State.name.like('%a%')).all()
+    # FIX: Use .ilike() instead of .like() to force case-insensitivity
+    # This guarantees catching 'a' and 'A' across all record variations
+    to_delete = session.query(State).filter(State.name.ilike('%a%')).all()
 
     # Delete each matching state object from the session
-    for state in states_to_delete:
+    for state in to_delete:
         session.delete(state)
 
     # Commit the changes to permanently save them to the database
