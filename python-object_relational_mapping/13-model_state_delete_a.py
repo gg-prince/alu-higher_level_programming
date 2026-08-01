@@ -38,4 +38,3 @@ if __name__ == "__main__":
 
     # Clean up and close the session
     session.close()
-
