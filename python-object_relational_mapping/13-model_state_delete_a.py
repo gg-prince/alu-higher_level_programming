@@ -36,6 +36,3 @@ if __name__ == "__main__":
 
     # Commit the changes to permanently save them to the database
     session.commit()
-
-    # Clean up and close the session
-    session.close()
