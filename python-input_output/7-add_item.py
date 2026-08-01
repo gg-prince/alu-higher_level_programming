@@ -11,7 +11,6 @@ load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 filename = "add_item.json"
 
-# Check if the file exists; if so, load the existing list. Otherwise, start fresh.
 if os.path.exists(filename):
     my_list = load_from_json_file(filename)
 else:
