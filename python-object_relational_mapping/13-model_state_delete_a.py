@@ -28,7 +28,8 @@ if __name__ == "__main__":
 
     # Query all states containing the letter 'a' (case-sensitive)
     # Use .like('%a%') for matching anywhere in the string
-    states_to_delete = session.query(State).filter(State.name.like('%a%')).all()
+    states_to_delete =
+ session.query(State).filter(State.name.like('%a%')).all()
 
     # Delete each matching state object from the session
     for state in states_to_delete:
