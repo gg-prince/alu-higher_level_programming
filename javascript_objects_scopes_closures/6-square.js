@@ -6,7 +6,7 @@ class ggp_Square extends Square {
   charPrint (c) {
     const ggp_char = c === undefined ? 'X' : c;
     for (let ggp_i = 0; ggp_i < this.height; ggp_i++) {
-      console.log('Ggp ' + ggp_char.repeat(this.width));
+      console.log(ggp_char.repeat(this.width));
     }
   }
 }

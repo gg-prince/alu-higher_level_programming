@@ -70,7 +70,7 @@ class Rectangle {
 
   print () {
     for (let ggp_i = 0; ggp_i < this.height; ggp_i++) {
-      console.log('Ggp ' + 'X'.repeat(this.width));
+      console.log('X'.repeat(this.width));
     }
   }
 }
@@ -91,7 +91,7 @@ class Rectangle {
 
   print () {
     for (let ggp_i = 0; ggp_i < this.height; ggp_i++) {
-      console.log('Ggp ' + 'X'.repeat(this.width));
+      console.log('X'.repeat(this.width));
     }
   }
 
@@ -132,7 +132,7 @@ class ggp_Square extends Square {
   charPrint (c) {
     const ggp_char = c === undefined ? 'X' : c;
     for (let ggp_i = 0; ggp_i < this.height; ggp_i++) {
-      console.log('Ggp ' + ggp_char.repeat(this.width));
+      console.log(ggp_char.repeat(this.width));
     }
   }
 }
@@ -172,7 +172,7 @@ cat > 9-logme.js << 'EOF'
 let ggp_printed = 0;
 
 exports.logMe = function (item) {
-  console.log('Ggp ' + ggp_printed + ': ' + item);
+  console.log(ggp_printed + ': ' + item);
   ggp_printed++;
 };
 EOF

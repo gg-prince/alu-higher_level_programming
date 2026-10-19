@@ -10,7 +10,7 @@ class Rectangle {
 
   print () {
     for (let ggp_i = 0; ggp_i < this.height; ggp_i++) {
-      console.log('Ggp ' + 'X'.repeat(this.width));
+      console.log('X'.repeat(this.width));
     }
   }
 

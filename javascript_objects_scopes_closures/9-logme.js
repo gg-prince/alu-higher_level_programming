@@ -3,6 +3,6 @@
 let ggp_printed = 0;
 
 exports.logMe = function (item) {
-  console.log('Ggp ' + ggp_printed + ': ' + item);
+  console.log(ggp_printed + ': ' + item);
   ggp_printed++;
 };
