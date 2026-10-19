@@ -1,0 +1,3 @@
+-- List all rows
+-- Display all rows from first_table
+SELECT * FROM first_table;
